@@ -34,7 +34,7 @@ public class DummyControllerTest {
     @PutMapping("/dummy/users/{id}")
     public User updateUser(@PathVariable int id, @RequestBody User requestUser) {
         System.out.println("id : "+ id);
-        System.out.println("passworg : " +requestUser.getPassword());
+        System.out.println("password : " +requestUser.getPassword());
         System.out.println("email : "+requestUser.getEmail());
 
         User user = userRepository.findById(id).orElseThrow(()-> {
@@ -42,10 +42,8 @@ public class DummyControllerTest {
         });
         user.setPassword(requestUser.getPassword());
         user.setEmail(requestUser.getEmail());
-
         return user;
     }
-
 
     @GetMapping("/dummy/user/all")
     public List<User> list() {
@@ -55,8 +53,8 @@ public class DummyControllerTest {
     @GetMapping("/dummy/users")
     public List<User> pageList(@PageableDefault(size = 2, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
         Page<User> pagingUsers = userRepository.findAll(pageable);
-
         List<User> users = pagingUsers.getContent();
+
         return users;
     }
 

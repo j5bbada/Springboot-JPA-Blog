@@ -8,6 +8,14 @@ server:
       force: true
 
 spring:
+  profiles:
+    active: dev
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
   mvc:
     view:
       prefix: /WEB-INF/views/
