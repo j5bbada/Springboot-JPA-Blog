@@ -2,7 +2,7 @@
          pageEncoding="utf-8" %>
 <%@ include file="../layouts/header.jsp" %>
 <div class="container">
-    <form action="/action_page.php">
+    <form action="/blog/api/users/login">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="username" class="form-control" placeholder="Enter username" id="username">
@@ -18,8 +18,9 @@
             </label>
         </div>
     </form>
-        <button id="btn-save" class="btn btn-primary">로그인</button>
+    <button id="btn-login" class="btn btn-primary">로그인</button>
 </div>
+<script src="/blog/js/user.js"></script>
 <%@ include file="../layouts/footer.jsp" %>
 
 
