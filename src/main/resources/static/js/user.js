@@ -17,14 +17,14 @@ let index = {
         // console.log(data)
         $.ajax({
             type: "POST",
-            url: "/blog/api/users",
+            url: "/api/users",
             data: JSON.stringify(data),
             contentType:"application/json; charset=utf-8",
             // dataType:"json"
         }).done(function (res) {
             alert("회원가입 완료");
             // console.log(res);
-            location.href = "/blog";
+            location.href = "/";
         }).fail(function (error) {
             alert(JSON.stringify(error))
         });
@@ -38,14 +38,14 @@ let index = {
         // console.log(data)
         $.ajax({
             type: "POST",
-            url: "/blog/api/users/login",
+            url: "/api/users/login",
             data: JSON.stringify(data),
             contentType:"application/json; charset=utf-8",
             // dataType:"json"인
         }).done(function (res) {
             alert("로그 완료");
             // console.log(res);
-            location.href = "/blog";
+            location.href = "/";
         }).fail(function (error) {
             alert(JSON.stringify(error))
         });

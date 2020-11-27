@@ -2,7 +2,7 @@
          pageEncoding="utf-8" %>
 <%@ include file="../layouts/header.jsp" %>
 <div class="container">
-    <form action="/user/join" method="post">
+    <form>
         <div class="form-group">
             <label for="username">Username</label>
             <input type="username" class="form-control" placeholder="Enter username" id="username">
@@ -17,12 +17,10 @@
             <label for="email">Email</label>
             <input type="email" class="form-control" placeholder="Enter email" id="email">
         </div>
-
-
     </form>
     <button id="btn-save" class="btn btn-primary">회원가입</button>
 </div>
-<script src="/blog/js/user.js"></script>
+<script src="/js/user.js"></script>
 <%@ include file="../layouts/footer.jsp" %>
 
 
